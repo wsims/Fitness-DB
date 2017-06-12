@@ -3,9 +3,13 @@
 mysql_connect("classmysql.engr.oregonstate.edu","cs340_simsw","9855");
 mysql_select_db("cs340_simsw");
 
+$name = $_GET["name"];
+
+echo $name;
+
 //query
 $sql=mysql_query("SELECT exerciseID, name FROM Exercise");
-$sql2=mysql_query("SELECT routineID, name FROM Routine");
+$sql2=mysql_query("SELECT name FROM Routine WHERE name = '$name'");
 if(mysql_num_rows($sql)){
 $select= '<select name=exerciseID>';
 $select2= '<select name="routineID">';

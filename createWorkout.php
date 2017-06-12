@@ -38,6 +38,8 @@ mysqli_close($conn);
 
 header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php",TRUE,303);
 
+//header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php?id=".$thisNid."'
+
 ?> -->
 
 	
