@@ -1,6 +1,4 @@
-<html>
-<body>
- 
+
 <?php
 
 $valid = True;
@@ -28,28 +26,23 @@ $result = mysqli_query($conn, $query);
 
 if($valid == True)
 {
+
 $sql="INSERT INTO Routine (name, length)
 VALUES
 ('$_POST[name]','$_POST[length]')";
- 
-if (!mysql_query($sql,$con))
-  {
-  die('Error: ' . mysql_error());
-  }
-echo "1 record added, please return to the previous page";
+
+header('Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php');
+
 } 
 else
 {
 	if($emptyfields == False) {
-echo "That username has already been taken! Please return to the previous page.";	
+
 	}
 	else {
-echo "Please enter the required fields, please return to the previous page.";
+
 	}
 }
-
 mysql_close($con)
 
 ?>
-</body>
-</html>
