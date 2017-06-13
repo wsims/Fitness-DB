@@ -21,8 +21,10 @@ else
 		die('Could not connect: ' . mysql_error());
 	}
 
-	$checkResult = mysqli_query($conn, "SELECT name FROM Routine WHERE name = '$name'");
-	if($checkResult = Null)
+	$nameForQuery = mysql_real_escape_string($name);
+	$checkResult = mysqli_query($conn, "SELECT name FROM Routine WHERE name = '$nameForQuery'");
+
+	if(true == true)
 	{
 			$result = mysqli_query($conn,"INSERT INTO Routine (name, length) VALUES ('".$name."','".$length."')");
 			mysqli_close($conn);

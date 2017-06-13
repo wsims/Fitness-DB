@@ -17,7 +17,7 @@ echo '<form action="insertExercise.php" method="post">';
 echo '<br><br>';
 echo 'defaultSets: <input type="text" name="defaultSets" />';
 echo '<br><br>';
-echo 'defaultSets: <input type="text" name="defaultReps" />';
+echo 'defaultReps: <input type="text" name="defaultReps" />';
 echo '<br><br>';
 while($rs=mysql_fetch_array($sql)){
       $select.='<option value="'.$rs['exerciseID'].'">'.$rs['name'].'</option>';
