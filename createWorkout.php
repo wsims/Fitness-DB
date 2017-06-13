@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <html>
 <body>
-<h1>Create your Routine</h1>
+<h1>Create Workout Routine</h1>
 <h1></h1>
 <form action="insertRoutine.php" method="post">
 Name: <input type="text" name="name" /> Name your routine.

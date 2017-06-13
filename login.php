@@ -97,7 +97,7 @@ if($user=="" && $pass=="" && $LoginUser!="" && $LoginPass!="")
 		session_set_cookie_params(0);
 		session_start();
 		$_SESSION['UserLogined'] = $LoginUser;
-		$msg = "loged in as ".  $_SESSION['UserLogined'];
+		$msg = "Logged in as ".  $_SESSION['UserLogined'];
 		echo ($msg);
 	}
 
