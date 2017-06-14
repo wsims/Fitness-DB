@@ -5,7 +5,6 @@ $defaultSets=$_POST['defaultSets'];
 $routineID=$_POST['routineID'];
 $exerciseID=$_POST['exerciseID'];
 
-
 if(true == true)
 {
 	$servername="classmysql.engr.oregonstate.edu";
@@ -25,7 +24,7 @@ if(true == true)
 }
 
 mysqli_close($conn);
-
+//
 header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/createWorkoutStepTwo.php",TRUE,303);
 
 ?>
