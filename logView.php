@@ -26,7 +26,7 @@
 			$thisName = htmlspecialchars($obj -> name);
 			$thisLength = htmlspecialchars($obj -> routineDate);
 			echo "<div id='content'>";
-			echo "<a href='http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/logView.php?id=".$thisNid."' style='text-decoration:none'>";
+			echo "<a href='http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/logRoutineView.php?id=".$thisNid."' style='text-decoration:none'>";
 			echo "<h2 id='title'>".$thisName."</h2>";
 			echo "</a>";
 			echo "<h2 id='length'>".$thisLength."</h2>";	
