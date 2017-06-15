@@ -2,6 +2,6 @@
   session_start();
   session_unset();
   session_destroy();
-  header("Location: http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/home.php"); /* Redirect browser */
+  header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/home.php"); /* Redirect browser */
   exit();
 ?>
