@@ -16,7 +16,7 @@
 			        <a href="createWorkout.php">Create Workout</a>
           </div>
           <div class="logo">
-            <a href="http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/home.php">Fitness DB</a>
+            <a href="http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/home.php">Fitness DB</a>
           </div>
         </div>
       </header>
