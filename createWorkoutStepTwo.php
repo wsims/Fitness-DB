@@ -43,7 +43,7 @@
  echo $select2;
  echo $select3;
  echo '<input type="submit" value="Add"/>         ';
- echo '<input type="button" onclick="window.location=\'http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php\'" class="register" value="Done"/>';
+ echo '<input type="button" onclick="window.location=\'http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/login.php\'" class="register" value="Done"/>';
 
 
 

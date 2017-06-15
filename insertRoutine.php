@@ -4,7 +4,7 @@ $length=$_POST['length'];
 if(empty($_POST["name"]) || empty($_POST["length"]))
 {
 	mysqli_close($conn);
-	header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php", TRUE, 303);
+	header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/login.php", TRUE, 303);
 }
 else
 {
@@ -22,12 +22,12 @@ else
 	{
 			$result = mysqli_query($conn,"INSERT INTO Routine (name, length) VALUES ('".$name."','".$length."')");
 			mysqli_close($conn);
-			header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/createWorkoutStepTwo.php?name=".$name."",TRUE,303);
+			header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/createWorkoutStepTwo.php?name=".$name."",TRUE,303);
 	}
 	else
 	{
 			mysqli_close($conn);
-			header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php", TRUE, 303);
+			header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/login.php", TRUE, 303);
 	}
 }
 //header("Location: http://web.engr.oregonstate.edu/~pociusr/Fitness-DB/login.php?id=".$thisNid."'

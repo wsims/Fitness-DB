@@ -8,19 +8,16 @@
 <?php
 // change the value of $dbuser and $dbpass to your username and password
 	include 'connectvarsEECS.php';
-
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
 		die('Could not connect: ' . mysql_error());
 	}
 	$table = 'Routine';
 	$query = "SELECT name as 'Workout Name', length as 'Expected Length' FROM $table ";
-
 	$result = mysqli_query($conn, $query);
 	if (!$result) {
 		die("Query to show fields from table failed");
 	}
-
 	$fields_num = mysqli_num_fields($result);
 	echo "<table border='1'><tr>";
 	// printing table headers
@@ -37,7 +34,6 @@
 			echo "<td>$cell</td>";
 		echo "</tr>\n";
 	}
-
 	mysqli_free_result($result);
 	mysqli_close($conn);
 	?>

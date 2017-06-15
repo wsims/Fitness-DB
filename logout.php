@@ -5,3 +5,4 @@
   header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB"); /* Redirect browser */
   exit();
 ?>
+
