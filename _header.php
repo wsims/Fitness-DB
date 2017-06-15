@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="assets/style.css">
 <html>
       <header class = "header">
@@ -15,7 +16,7 @@
 			        <a href="createWorkout.php">Create Workout</a>
           </div>
           <div class="logo">
-            <a href="http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/">Fitness DB</a>
+            <a href="http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/home.php">Fitness DB</a>
           </div>
         </div>
       </header>
