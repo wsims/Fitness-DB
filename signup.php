@@ -1,20 +1,23 @@
 <?php include("_header.php"); ?>
 <html>
 	<head>
-		<title>Sign-up</title>
+		<title>Sign Up</title>
 	</head>
 
 <body>
-<h1> sign-up</h1>
+<h1> Sign Up</h1>
 
+<div id=form>
 <form action="signup.php" method="post">
-	User name:<br>
+	Enter your username:<br>
 		<input type="text" name="Uname" value=""><br>
-	password:<br>
+	Create a password:<br>
 		<input type="text" name="Passw" value=""><br>
-	<input type="submit">
+	<button type="submit"> Sign Up </button>
+
 <br>
 </form>
+</div>
 
 <?php
 $user=$_POST['Uname'];

@@ -7,12 +7,16 @@
 <body>
 
 <h1>login</h1>
+
+<div id=form>
 <form action="login.php" method="post">
-	User name:<br>
+	Username:<br>
 		<input type="text" name="Username" value=""><br>
-	password:<br>
+	Password:<br>
 		<input type="password" name="Password" value=""><br>
-	<input type="submit">
+	<button type="submit"> Log In </button>
+	<a href="http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/signup.php"> Need an account? Sign Up!</a>
+</div>
 <br>
 </form>
 
