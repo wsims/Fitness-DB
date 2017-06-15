@@ -26,7 +26,7 @@
 			$thisName = htmlspecialchars($obj -> name);
 			$thisLength = htmlspecialchars($obj -> length);
 			echo "<div id='content'>";
-			echo "<a href='http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/routineView.php?id=".$thisNid."' style='text-decoration:none'>";
+			echo "<a href='http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/routineView.php?id=".$thisNid."' style='text-decoration:none'>";
 			echo "<h2 id='title'>".$thisName."</h2>";
 			echo "</a>";
 			echo "<h2 id='length'>".$thisLength."</h2>";	

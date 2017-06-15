@@ -4,14 +4,16 @@
 <body>
 <h1>Create Workout Routine</h1>
 <h1></h1>
+<div id=form>
 <form action="insertRoutine.php" method="post">
-Name: <input type="text" name="name" /> Name your routine.
+Name your routine<input type="text" name="name" />
 <br><br>
-Length: <input type="text" name="length" /> How long does your routine take?
+How long does your routine take?<input type="text" name="length" />
 <br><br>
 
 <input type="submit" />
 </form>
+</div>
 
 	
 </body>

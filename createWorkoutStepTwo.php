@@ -13,6 +13,7 @@
  $select= '<select name=exerciseID>';
  $select2= '<select name="routineID" style="display:none">';
  $select3= '<select name="name" style="display:none">';
+ echo '<div id="form">';
  echo '<form action="insertExercise.php" method="post">';
  echo '<br><br>';
  echo 'Default Sets: <input type="text" name="defaultSets" />';
@@ -43,8 +44,8 @@
  echo $select2;
  echo $select3;
  echo '<input type="submit" value="Add"/>         ';
- echo '<input type="button" onclick="window.location=\'http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/login.php\'" class="register" value="Done"/>';
-
+ echo '<input type="button" onclick="window.location=\'http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/login.php\'" class="register" value="Done"/>';
+ echo '</div>';
 
 
  ?>

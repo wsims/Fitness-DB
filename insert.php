@@ -29,7 +29,7 @@ $sql="INSERT INTO Routine (name, length)
 VALUES
 ('$_POST[name]','$_POST[length]')";
 
-header('Location: http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/login.php');
+header('Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/login.php');
 
 } 
 else

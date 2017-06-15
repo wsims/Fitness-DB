@@ -30,6 +30,6 @@ mysqli_close($conn);
 
 //$name = "leg crusher";
 //
-header("Location: http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/createWorkoutStepTwo.php?name=".$name."",TRUE,303);
+header("Location: http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/createWorkoutStepTwo.php?name=".$name."",TRUE,303);
 
 ?>
