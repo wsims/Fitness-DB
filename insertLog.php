@@ -65,7 +65,7 @@
 	<title>Logged Excercise</title>
 </head>
 
-<a href="http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/logView.php">Workout Log</a>
+<a href="http://web.engr.oregonstate.edu/~sims/cs340/FitnessDB/logView.php">Workout Log</a>
 
 
 </html>
