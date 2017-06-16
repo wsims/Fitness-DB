@@ -7,28 +7,38 @@
   include 'connectvarsEECS.php';
   include 'routineView.php?id=1';
 
+
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
 		die('Could not connect: ' . mysql_error());
 	}
 
- $array;
- $id;
+ 	$array;
+ 	$id;
+ 	$logRoutID;
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$timeVal = "2017-06-14" ;
-		$timeVal=date("Y-m-d",strtotime($timeVal));
-		$username = $_SESSION['UserLogined'];
-		$id= $_SESSION['RoutineID'];
-	  $array = $_SESSION['Array'];
+	$timeVal = date("Y-m-d");
+	$username = $_SESSION['UserLogined'];
+	$id= $_SESSION['RoutineID'];
+	$array = $_SESSION['Array'];
+
+		$result4 = mysqli_query($conn,"SELECT MAX(logRoutineID) FROM logRoutine ");
+		if (!$result4) {
+			die("Query failed");
+		}
+		$row = mysqli_fetch_row($result4);
+		$logRoutID =$row[0];
 
 
-		echo "$username, $id".$timeVal."";
+		//echo "$username, $id".$timeVal."";
 		$_user = mysql_real_escape_string($username);
 		$_id = mysql_real_escape_string($id);
-		$result = mysqli_query($conn,"INSERT INTO logRoutine (username, routineID, routineDate) VALUES ('$_user','$id','2017-06-14')");
+
+		$result = mysqli_query($conn,"INSERT INTO logRoutine (username, routineID, routineDate) VALUES ('$_user','$id','$timeVal')");
 		if (!$result) {
 			die("Query failed");
+
 		}
 	}
 
@@ -36,22 +46,25 @@
 	for ($i = 1; $i <= 5; $i++) {
 		array_push($weights, $_POST["weight{$i}"]);
 	}
-	for($i = 0; $i < count($weights); ++$i) {
-    echo $weights[$i];
-		//echo $array[$i];
-	}
 
-	for($i = 0; $i < count($array); ++$i) {
+	for($i = 0; $i < count($array); ++ $i) {
 		$temp = $array[$i];
 		//$temp[0];
-		$result2 = mysqli_query($conn,"INSERT INTO `logRoutineExercise` (`logExerciseID`, `logRoutineID`, `routineExerciseID`, `weight`) VALUES ('1', '$id', '$temp[0]', '$weights[$i]')");
+		$result2 = mysqli_query($conn,"INSERT INTO `logRoutineExercise` (`logExerciseID`, `logRoutineID`, `routineID`, `exerciseID`, `weight`) VALUES ('1', '$logRoutID', '$id', '$temp[0]', '$weights[$i]')");
 		if (!$result2) {
-			die("Query failed");
+			die("Query failed excercise");
 		}
 	}
-
-
-
   $conn->close();
-
 ?>
+
+<link rel="stylesheet" href="assets/style.css">
+<html>
+<head>
+	<title>Logged Excercise</title>
+</head>
+
+<a href="http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/logView.php">Workout Log</a>
+
+
+</html>
