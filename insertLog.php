@@ -23,14 +23,6 @@
 	$id= $_SESSION['RoutineID'];
 	$array = $_SESSION['Array'];
 
-		$result4 = mysqli_query($conn,"SELECT MAX(logRoutineID) FROM logRoutine ");
-		if (!$result4) {
-			die("Query failed");
-		}
-		$row = mysqli_fetch_row($result4);
-		$logRoutID =$row[0];
-
-
 		//echo "$username, $id".$timeVal."";
 		$_user = mysql_real_escape_string($username);
 		$_id = mysql_real_escape_string($id);
@@ -40,6 +32,13 @@
 			die("Query failed");
 
 		}
+		
+		$result4 = mysqli_query($conn,"SELECT MAX(logRoutineID) FROM logRoutine ");
+		if (!$result4) {
+			die("Query failed");
+		}
+		$row = mysqli_fetch_row($result4);
+		$logRoutID =$row[0];
 	}
 
 	$weights = array();
