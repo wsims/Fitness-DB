@@ -32,13 +32,14 @@
 			die("Query failed");
 
 		}
-		
+
 		$result4 = mysqli_query($conn,"SELECT MAX(logRoutineID) FROM logRoutine ");
 		if (!$result4) {
 			die("Query failed");
 		}
 		$row = mysqli_fetch_row($result4);
 		$logRoutID =$row[0];
+
 	}
 
 	$weights = array();
@@ -49,7 +50,8 @@
 	for($i = 0; $i < count($array); ++ $i) {
 		$temp = $array[$i];
 		//$temp[0];
-		$result2 = mysqli_query($conn,"INSERT INTO `logRoutineExercise` (`logExerciseID`, `logRoutineID`, `routineID`, `exerciseID`, `weight`) VALUES ('1', '$logRoutID', '$id', '$temp[0]', '$weights[$i]')");
+
+		$result2 = mysqli_query($conn,"INSERT INTO `logRoutineExercise` (`logExerciseID`, `logRoutineID`, `exerciseRoutineID`, `weight`) VALUES ('1', '$logRoutID', '$temp[0]', '$weights[$i]')");
 		if (!$result2) {
 			die("Query failed excercise");
 		}
@@ -63,7 +65,7 @@
 	<title>Logged Excercise</title>
 </head>
 
-<a href="http://web.engr.oregonstate.edu/~simsw/cs340/FitnessDB/logView.php">Workout Log</a>
+<a href="http://web.engr.oregonstate.edu/~bolanosf/FitnessDB/logView.php">Workout Log</a>
 
 
 </html>
